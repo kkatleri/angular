@@ -1,0 +1,7 @@
+<!-- Assignment - 2 -->
+<button class="btn btn-primary" (click)="onDisplay()"> Display Details</button>
+<p *ngIf = "toggle">This is toggeling text.</p>
+<div *ngFor="let eventLog of eventLogs; let i=index">
+  <p [ngStyle]="{backgroundColor:i > 4 ? 'blue' : 'transparent'}"
+      [ngClass]="{'white-text' : i > 4}"> {{ eventLog }} </p>
+</div>
