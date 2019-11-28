@@ -1,0 +1,21 @@
+<div class="container">
+  <app-cockpit 
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+    (serverNameUpdated)="onServerNameUpdated($event)"
+    (serverDeleted)="onServerDeleted()">
+  </app-cockpit>
+  <hr>
+  <div class="row">
+     <div class="col-xl-12">
+        <app-server-element 
+          *ngFor="let element of serverElements"
+          [serverElement]="element"
+          [updatedServerName]="element.name">
+          <p #paragraphContent 
+            [ngStyle]="{color:element.type=='server' ? 'green' : 'blue'}"
+             [ngClass]="{'font-italic' : element.type!='server'}">{{element.content}}</p>
+        </app-server-element>
+     </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="row border mb-2">
+  <div class="col-md-12">
+    <strong>{{account.name}}</strong>
+    <hr>
+    <p>This account is {{account.status}}</p>
+  </div>
+  <button class="btn btn-light border ml-2 mr-2 mb-2" (click)="changeStatusTo('Active', id)">Set to 'Active'</button>
+  <button class="btn btn-light border mr-2 mb-1" (click)="changeStatusTo('Inactive', id)">Set to 'Inactive'</button>
+  <button class="btn btn-light border mr-2 mb-1" (click)="changeStatusTo('Unknown', id)">Set to 'Unknown'</button>
+</div>

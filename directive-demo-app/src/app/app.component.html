@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary mb-3" (click)="toggleNumbers()">
+        Show Odd/Even Numbers
+      </button>
+      <!-- <div *ngIf="!onlyOdd" >
+        <ul class="list-group"  *ngFor="let oddNumber of oddNumbers">
+            <li class="list-group-item">{{oddNumber}}</li>
+        </ul>
+      </div>
+      <div *ngIf="onlyOdd" >
+          <ul class="list-group" *ngFor="let evenNumber of evenNumbers">
+              <li class="list-group-item">{{evenNumber}}</li>
+          </ul>
+      </div>   -->
+      <div *appUnless="onlyOdd" >
+          <ul class="list-group"  *ngFor="let oddNumber of oddNumbers">
+              <li class="list-group-item">{{oddNumber}}</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <br/>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <p appBasichighlighter> 
+        This is using basic highlighter by directly accessing DOM element in the code.
+      </p>
+    </div>
+    <hr>
+    <div class="col-md-12">
+      <p appAdvancedHighlighter
+        [defaultBackgroundColor] = "'transparent'"
+        highlightedBackgroundColor = "yellow" 
+        [defaultFontColor] = "'black'"
+        [highlightedFontColor] = "'green'"  > 
+        This is using advanced highlighter using Renderer, HostListener and HostBinding. 
+        Please roll the cursor over this text to see effect.
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <div [ngSwitch]="switchValue">
+        <p *ngSwitchCase="5">The switch case value is 5</p>
+        <p *ngSwitchCase="10">The switch case value is 5</p>
+        <p *ngSwitchCase="100">The switch case value is 5</p>
+        <p *ngSwitchDefault>The switch case value is Default</p>
+      </div>
+    </div>
+  </div>
+</div>

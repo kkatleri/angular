@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Active Users Group</h3>
+      <ul class="list-group" *ngFor="let userel of users; let i=index">
+        <app-active-users 
+          *ngIf="userel.status==='Active'"
+          [user] = "userel"
+          [id] = "i">
+        </app-active-users>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-3 mb-3">
+      <div class="col-md-10">
+          <hr>
+      </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Inactive Users Group</h3>
+      <ul class="list-group" *ngFor="let userel of users; let i=index">
+        <app-inactive-users
+          *ngIf= "userel.status==='Inactive'"
+          [user] = "userel"
+          [id] = "i">
+        </app-inactive-users>
+      </ul>
+    </div>
+  </div>
+</div>

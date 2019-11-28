@@ -1,0 +1,18 @@
+<div class="container">
+  <app-game-control
+    (counterIncremented)="onCounterIncremented($event)"
+     (resetCounter)="onCounterReset()" ></app-game-control>
+     <hr>
+<div class="row" *ngFor="let counterElement of counterElements">
+  <div class="col-xl-12">
+    <app-even-listener 
+      *ngIf="counterElement % 2 == 0"
+      [evenCounter]="counterElement">
+    </app-even-listener>
+    <app-odd-listener 
+      *ngIf="counterElement % 2 != 0"
+      [oddCounter]="counterElement">
+    </app-odd-listener>
+  </div>
+</div>
+</div>
