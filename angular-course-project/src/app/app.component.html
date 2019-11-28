@@ -1,0 +1,10 @@
+<app-header
+  (onTabSelectorChange)="setTabSelected($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="tabSelected === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="tabSelected === 'shoppingList'"></app-shopping-list>
+    </div>
+  </div>
+</div>
