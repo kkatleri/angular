@@ -1,0 +1,20 @@
+<table *ngIf="teamPlayers.length > 0" class="table table-striped table-bordered">
+  <thead>
+    <tr style="background-color:darkgrey;">
+      <th scope="col-1">#</th>
+      <th scope="col-2">Player</th>
+      <th scope="col-2">Skill</th>
+      <th scope="col-1">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of teamPlayers; let id='index'">
+      <td>{{player.id}} </td>
+      <td>{{player.name}}</td>
+      <td>{{player.skill}}</td>
+      <td class="mr-2">
+        <button type="button" class="btn btn-danger mr-1" (click)="removePlayer(player)">X</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

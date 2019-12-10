@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <!-- Using EventEmitter -->
+    <!-- <app-new-team (teamAdded)="onTeamAdded($event)"></app-new-team> -->
+    <!-- USing Service -->
+    <div class="row">
+        <app-new-team></app-new-team>
+    </div>
+    <hr>
+    <!-- Using EventEmitter -->
+    <!-- <app-teams-list [teams]='teamList'></app-teams-list> -->
+    <div class="row">
+        <div class="col-md-6">
+            <app-teams-list></app-teams-list>
+        </div>
+        <div class="col-md-6">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h5> Add new player </h5>
+            <br />
+            <div class="row">
+                <div class="col-md-3 mr-3">
+                    Name: <input type="text" class="form-control" #playerNameInput />
+                </div>
+                <div class="col-md-6">
+                    Skill: <br />
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="Batting" #playerSkillInput>
+                        <label class="form-check-label" for="inlineRadio1">Batting</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="Bowling" #playerSkillInput>
+                        <label class="form-check-label" for="inlineRadio2">Bowling</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="AllRounder" #playerSkillInput>
+                        <label class="form-check-label" for="inlineRadio3">AllRounder</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    Team: <br />
+                    <select id="inputState" class="form-control" #playerTeamInput>
+                        <option selected>Choose...</option>
+                        <option *ngFor="let team of teams" value={{team.id}}>{{team.name}}</option>
+                      </select>
+                </div>
+            </div>
+            <br /> <br />
+            <button type="button" class="btn btn-primary mr-3" (click)="onAdd()">Add</button>
+            <button type="button" class="btn btn-secondary mr-3">Clear</button>
+        </div>
+    </div>
+</div>
