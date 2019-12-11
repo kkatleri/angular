@@ -6,17 +6,9 @@ import { Component, EventEmitter, OnInit, Output } from "@angular/core";
     styleUrls : []
 })
 export class HeaderComponent implements OnInit{
-
-    @Output() onTabSelectorChange = new EventEmitter<string>();
-
     constructor(){
     }
 
     ngOnInit(){
-    }
-
-    onSelect(feature: string){
-        this.onTabSelectorChange.emit(feature);
-    }
-    
+    }   
 }

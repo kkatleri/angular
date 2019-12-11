@@ -1,27 +1,27 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a href="#" class="navbar-brand"> Recipe Book </a>
+            <a class="navbar-brand" routerLink="/recipes"> Recipe Book </a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link" (click)="onSelect('recipe')"> Recipes </a>
+                    <a class="nav-link" routerLink="/recipes" routerLinkActive="active"> Recipes </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" (click)="onSelect('shoppingList')"> Shopping-List </a>
+                    <a class="nav-link" routerLink="/shopping-list" routerLinkActive="active"> Shopping-List </a>
                 </li>
             </ul>
             <ul class="navbar-nav my-2 my-md-0">
                 <div class="dropdown">
-                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    <a class="btn btn-light dropdown-toggle" style="cursor: pointer" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Manage
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Save Data</a>
-                        <a class="dropdown-item" href="#">Fetch Data</a>
+                        <a class="dropdown-item" style="cursor: pointer">Save Data</a>
+                        <a class="dropdown-item" style="cursor: pointer">Fetch Data</a>
                     </div>
                 </div>
             </ul>

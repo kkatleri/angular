@@ -7,15 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   
-  tabSelected: string = "recipe";
-
-  constructor(){
+ constructor(){
   }
 
   ngOnInit(){
-  }
-
-  setTabSelected(tabSelector: string){
-    this.tabSelected = tabSelector;
   }
 }
