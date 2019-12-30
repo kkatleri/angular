@@ -1,0 +1,3 @@
+rootProject.name = 'angular-spring-boot-app'
+
+include 'server-api','angular-ui'
